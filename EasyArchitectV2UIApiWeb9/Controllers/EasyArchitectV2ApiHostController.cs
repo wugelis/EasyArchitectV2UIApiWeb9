@@ -81,6 +81,18 @@ namespace EasyArchitectV2UIApiWeb9.Controllers
         {
             return await Task.FromResult(_userService.IdentityUser);
         }
+        /// <summary>
+        /// Get Hello World Smaple Code.
+        /// </summary>
+        /// <returns></returns>
+        [NeedAuthorize]
+        [APIName("GetHelloWorld")]
+        [ApiLogException]
+        [ApiLogonInfo]
+        public async Task<string> GetHelloWorldAsync()
+        {
+            return await Task.FromResult("Hello World");
+        }
     }
 
     /// <summary>
